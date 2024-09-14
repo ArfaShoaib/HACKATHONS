@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dynamic And Editable Resume Builder</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <h1>Dynamic And Editable Resume Builder</h1>
+      <form id="resume-form">
+        <section>
+          <h2>Personal Information</h2>
+          <label for="username">Username</label>
+          <input type="text" id="username" name="username" required />
+          <label for="name">Name:</label>
+          <input type="text" id="name" name="name" required />
+
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </section>
+        <section>
+          <div id="education-section">
+            <h2>Education</h2>
+            <div class="education-group">
+              <label for="degree">Degree:</label>
+              <input type="text" class="degree" name="degree" required />
+
+              <label for="institution">Institution:</label>
+              <input
+                type="text"
+                class="institution"
+                name="institution"
+                required
+              />
+
+              <label for="start-date">Start Date:</label>
+              <input
+                type="date"
+                class="start-date"
+                name="start-date"
+                required
+              />
+
+              <label for="end-date">End Date:</label>
+              <input type="date" class="end-date" name="end-date" required />
+            </div>
+          </div>
+          <button id="add-education" type="button">Add More Education</button>
+        </section>
+
+        <section>
+          <div id="experience-section">
+            <h2>Work Experience</h2>
+            <div class="experience-group">
+              <label for="job-title">Job Title:</label>
+              <input type="text" class="job-title" name="job-title" required />
+
+              <label for="company">Company:</label>
+              <input type="text" class="company" name="company" required />
+
+              <label for="start-date">Start Date:</label>
+              <input
+                type="date"
+                class="start-date"
+                name="start-date"
+                required
+              />
+
+              <label for="end-date">End Date:</label>
+              <input type="date" class="end-date" name="end-date" required />
+            </div>
+          </div>
+          <br />
+          <button id="add-experience" type="button">Add More Experience</button>
+          <br />
+        </section>
+
+        <section id="skills-section">
+          <h2>Skills</h2>
+          <div class="skills-group">
+            <label for="skills">Skill:</label>
+            <input type="text" class="skills" name="skills" required />
+          </div>
+          <button type="button" id="add-skill">Add More Skills</button>
+        </section>
+
+        <button type="submit">Generate Resume</button>
+      </form>
+
+      <div id="resume-preview">
+        <h2>Your Resume Preview:</h2>
+        <div id="resume-content" contenteditable="true"></div>
+        
+      </div>
+      <div id="shareable-link-container">
+        
+        <h2>Shareable Link</h2>
+        <p>Here is your resume to view</p>
+        <a href="" id="shareable-link" target="_blank">HERE IS YOUR RESUME TO VIEW</a>
+      
+        <br />
+        <button id="download-pdf">Download as PDF</button>
+      </div>
+    </div>
+
+    <script src="index.js"></script>
+  </body>
+</html>
