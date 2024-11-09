@@ -1,0 +1,302 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+:root {
+  --primary-color: #2563eb;
+  --primary-dark: #1e40af;
+  --text-primary: #1f2937;
+  --text-secondary: #4b5563;
+  --bg-primary: #f3f4f6;
+  --bg-secondary: #ffffff;
+  --border-color: #e5e7eb;
+  --shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1);
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  line-height: 1.5;
+}
+
+/* Form Container Styles */
+.full-container {
+  max-width: 800px;
+  margin: 2rem auto;
+  padding: 2rem;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border-radius: 1rem;
+}
+
+.intro {
+  text-align: center;
+  margin-bottom: 3rem;
+}
+
+.intro h1 {
+  font-size: 2.5rem;
+  color: var(--primary-color);
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+}
+
+.intro p {
+  font-size: 1.125rem;
+  color: var(--text-secondary);
+}
+
+/* Form Elements */
+.container-2, .container-2\.5, .container-3, .container-4, .container-5, 
+.container-6, .container-7, .container-9, .container-10 {
+  margin-bottom: 1.5rem;
+}
+
+label {
+  display: block;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  margin-bottom: 0.5rem;
+}
+
+input[type="text"],
+input[type="file"],
+textarea {
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid var(--border-color);
+  border-radius: 0.5rem;
+  font-size: 1rem;
+  transition: all 0.2s ease;
+  background-color: var(--bg-primary);
+}
+
+input[type="text"]:focus,
+textarea:focus {
+  outline: none;
+  border-color: var(--primary-color);
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+/* File Input Styling */
+.file-img {
+  margin: 1.5rem 0;
+}
+
+.text-file {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+/* Buttons */
+button {
+  background-color: var(--primary-color);
+  color: white;
+  padding: 0.75rem 1.5rem;
+  border: none;
+  border-radius: 0.5rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+button:hover {
+  background-color: var(--primary-dark);
+}
+
+.btn {
+  text-align: right;
+  margin: 1rem 0;
+}
+
+.btn-1 {
+  background-color: var(--text-secondary);
+  font-size: 0.875rem;
+  padding: 0.5rem 1rem;
+}
+
+.generate-btn {
+  text-align: center;
+  margin-top: 2rem;
+}
+
+.generate-btn button {
+  font-size: 1.125rem;
+  padding: 1rem 2rem;
+}
+
+/* Resume Template Styles */
+.full-container-2 {
+  max-width: 1000px;
+  margin: 2rem auto;
+  display: grid;
+  grid-template-columns: 300px 1fr;
+  background-color: var(--bg-secondary);
+  box-shadow: var(--shadow-md);
+  border-radius: 1rem;
+  overflow: hidden;
+}
+
+/* Left Side Styles */
+.left-side {
+  background-color: #334155;
+  padding: 2rem;
+  color: white;
+}
+
+.image {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  margin: 0 auto 2rem;
+  display: block;
+  border: 4px solid white;
+}
+
+.summary {
+  margin-bottom: 2rem;
+  width: 100%;
+}
+
+#summaryT {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  max-width: 100%;
+  line-height: 1.5;
+  font-size: 0.9rem;
+}
+
+/* For the input field */
+#summaryfield {
+  width: 100%;
+  min-height: 100px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+  resize: vertical;
+}
+
+.summary h1 {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+  color: white;
+}
+
+.headings h3 {
+  margin-top: 1rem;
+  font-size: 1.25rem;
+  margin-bottom: 0.5rem;
+}
+
+.headings a {
+  color: white;
+  text-decoration: none;
+}
+
+.contact-sec {
+  margin-top: 2rem;
+}
+
+.icons {
+  margin-top: 1rem;
+}
+
+.icons i {
+  display: block;
+  margin-bottom: 0.5rem;
+  font-size: 0.875rem;
+}
+
+/* Right Side Styles */
+.right-side {
+  padding: 2rem;
+  background-color: white;
+}
+
+.name {
+  font-size: 2.5rem;
+  font-weight: 700;
+  margin-bottom: 0.5rem;
+}
+
+.pro {
+  font-size: 1.25rem;
+  color: var(--text-secondary);
+  margin-bottom: 1rem;
+}
+
+.part {
+  margin: 2rem 0;
+  font-weight: bold;
+  font-size: 1.25rem;
+}
+
+.part ul {
+  list-style-type: none;
+  margin-top: 1rem;
+}
+
+.part ul li {
+  margin-bottom: 0.5rem;
+  padding-left: 1rem;
+  position: relative;
+  font-weight: normal;
+  font-size: 1rem;
+}
+
+.part ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--primary-color);
+}
+
+hr {
+  margin: 1rem 0;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.horizontol-line {
+  border-color: rgba(0, 0, 0, 0.2);
+}
+
+/* Responsive Design */
+@media (max-width: 1024px) {
+  .full-container-2 {
+    grid-template-columns: 250px 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .full-container-2 {
+    grid-template-columns: 1fr;
+  }
+  
+  .left-side {
+    padding: 1.5rem;
+  }
+  
+  .name {
+    font-size: 2rem;
+  }
+}
+
+@media (max-width: 640px) {
+  .full-container {
+    margin: 1rem;
+    padding: 1.5rem;
+  }
+  
+  .intro h1 {
+    font-size: 2rem;
+  }
+  
+  .generate-btn button {
+    width: 100%;
+  }
+}
